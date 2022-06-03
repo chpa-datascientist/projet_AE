@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  fastapi:
+    image: fastapi_projet_ae_ml:latest
+    container_name: fastapi_projet_ae_ml
+    ports:
+      - 8000:80
+
+  tu:
+    image: fastapi_projet_ae_ml_tu:latest
+    container_name: fastapi_projet_ae_ml_tu
+    environment:
+      LOG: 1
+      LOCATION_RESULT_FILE: /home/projet_AE/CI_fastapi_projet_ae_ml/
+    volumes:
+      - logs_fastapi_projet_ae_ml:/log
+      - $HOME:/home
+    restart: on-failure
+    depends_on:
+      - fastapi
+
+#ressources créées par script shell setup.sh
+networks:
+  default:
+    external:
+      name: network_fastapi_projet_ae_ml
+
+volumes:
+  logs_fastapi_projet_ae_ml:
+    external: true
