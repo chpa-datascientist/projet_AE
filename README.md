@@ -1,5 +1,5 @@
 # projet_AE
-DL bimodal classification model (text , image) available through FastAPI developped in the scope of data ENS challenge Rakuten e-commerce project (27 classes)  
+Modèle de classification bimodale (text , image) accessible sur une interface FasAPI développée dans le cadre du challenge data ENS Rakuten e-commerce , projet proposé réduit à 27 classes.  
 
 # Contexte
 Ce projet a été réalisé dans le cadre de la formation Data Scientist de Datascientest (promotion formation continue mai 2021) 
