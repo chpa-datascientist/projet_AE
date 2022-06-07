@@ -2,7 +2,7 @@ FROM ubuntu:focal-20220426
 ENV TZ=Europe/Paris
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apt-get update && apt-get install python3-pip -y && apt-get install libglib2.0-0 libsm6 libxrender1 libxext6 -y
+RUN apt-get update && apt-get install python3-pip -y && apt-get install libglib2.0-0 libgl1 libsm6 libxrender1 libxext6 -y
 
 COPY ./requirements.txt /home/ubuntu/projet_AE/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /home/ubuntu/projet_AE/requirements.txt
