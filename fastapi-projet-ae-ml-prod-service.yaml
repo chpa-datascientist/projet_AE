@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-projet-ae-ml-prod-service
+  namespace: fastapi-projet-ae-ml-prod-ns
+  labels:
+    app: fastapi-projet-ae-ml-prod
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8000
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: fastapi-projet-ae-ml-prod
+

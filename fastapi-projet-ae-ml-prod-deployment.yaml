@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-projet-ae-ml-prod-deployment
+  namespace: fastapi-projet-ae-ml-prod-ns
+  labels:
+    app: fastapi-projet-ae-ml-prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fastapi-projet-ae-ml-prod
+  template:
+    metadata:
+      labels:
+        app: fastapi-projet-ae-ml-prod
+    spec:
+      containers:
+      - name: fastapi-projet-ae-ml-prod
+        image: 16101965/fastapi-projet-ae-ml-prod:latest
+        ports:
+        - containerPort: 80
+

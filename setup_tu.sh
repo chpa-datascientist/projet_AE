@@ -3,7 +3,7 @@
 if [ "$#" -eq 0 ]
     then
         echo "lire attentivement"
-        echo "pas de chemin fourni en argument donc /home/ubuntu pris par défaut ou trouver projet_AE"
+        echo "pas de chemin fourni en argument donc /home/ubuntu pris comme localisation de projet_AE"
         echo "contrainte : le container tu écrit ses logs dans le home du shell actuel"
         rpath="/home/ubuntu"
         sleep 10

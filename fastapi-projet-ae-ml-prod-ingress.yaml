@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fastapi-projet-ae-ml-prod-ingress
+  namespace: fastapi-projet-ae-ml-prod-ns
+spec:
+  defaultBackend:
+    service:
+      name: fastapi-projet-ae-ml-prod-service
+      port:
+        number: 8000
+
