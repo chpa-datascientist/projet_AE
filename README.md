@@ -20,13 +20,14 @@ Chaque échantillon représente un article du catalogue de la plateforme de e-co
 # Description des fichiers
 Le dossier app contient les sources python associés au modèle de classification incluant le préprocessing NLP du texte.<br>
 Le dossier app_tu contient le jeu de tests unitaires<br>
-**Note : il manque sous app le fichier de 452 Mb des poinds du réseaux de neurones sauvegardés dans la phase entrainement**<br>
+**Note : il manque sous app le fichier de 452 Mb des points du réseaux de neurones sauvegardés dans la phase entrainement**<br>
 Le shell setup_tu.sh associé au docker-compose.yml<br>
 (aprés clonage du projet sur une machine virtuelle linux ou docker et docker-compose sont installés)<br>
 sert au déploiement des deux containers (système testé et sa série de tests untaires)<br> 
 qui permettra de vérifier si le modèle peut etre exposé en production.<br><br>
-Le shell kube_setup.sh sert à démmarrer l'application dans un cluster kubernetes<br>
-aprés avoir téléchargée celle ci depuis docker hub
+Le shell kube_setup.sh sert à démarrer l'application dans un cluster kubernetes (minikube avec un seul noeud) <br>
+aprés avoir téléchargée celle ci depuis docker hub<br>
+Le shell check_minikube_is_running.sh aide à vérifier que les pods systéme de minikube sont bien lancés sur la VM. 
 
 **modèle de classification choisi pour la généralisation :**<br />
 basé sur une architecture DL framework tensorflow multimodale (texte + image)<br />
