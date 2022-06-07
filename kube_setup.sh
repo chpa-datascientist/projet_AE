@@ -72,13 +72,13 @@ kubectl create -f fastapi-projet-ae-ml-prod-ingress.yaml
 
 echo ""
 echo "pause 2 mn pour que les phases de création des containers"
-echo "puis de démarrage des pods applicatifs soit réalisée"
+echo "puis de démarrage des pods applicatifs soient finalisées"
 echo "et que l'@IP externe ingress passe disponible"
 
 sleep 120
-echo "==================================="
-echo "specific namespace of the project :"
-echo "==================================="
+echo "================================"
+echo "namespace spécifique du projet :"
+echo "================================"
 kubectl get namespace | grep projet-ae-ml
 echo "déploiement :"
 kubectl get deployment -n=fastapi-projet-ae-ml-prod-ns | grep projet-ae-ml
