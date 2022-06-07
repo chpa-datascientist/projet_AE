@@ -64,7 +64,7 @@ docker volume create --name logs_fastapi_projet_ae_ml
 
 
 echo ""
-echo "création du sous réseau spécifique network_api_ml_sa"
+echo "création du sous réseau spécifique network_fastapi_projet_ae_ml"
 docker network create --subnet 172.50.0.0/16 --gateway 172.50.0.1 network_fastapi_projet_ae_ml
 
 echo ""
